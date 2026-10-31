@@ -13,8 +13,39 @@
         <header id="header"></header>
         <nav id="nav"></nav>
 
-        <main>
+        <main class="contact">
+            <div>
+                <form id="contactForm" action="https://formsubmit.co/ajax/maja.gawel06@gmail.com" method="POST">
+                    <h1>Napisz do mnie</h1>
+                    <div class="form-one">
+                        <input type="text" id="name" name="name" placeholder="Imie" required>
+                        <input type="text" id="surname" name="surname" placeholder="Nazwisko" required> 
 
+                    </div>
+                    
+                    <div class="form-one">
+                        <input type="email" id="email" name="email" placeholder="Email" required>
+                    </div>
+
+                    <div class="form-one">
+                        <select id="type" name="type" placeholder="Typ sesji" required>
+                            <option value="" disabled selected>Typ sesji</option>
+                            <option value="portretowa">Sesja portretowa</option>
+                            <option value="rodzinna">Sesja rodzinna / dziecięca</option>
+                            <option value="wizerunkowa">Sesja biznesowa / wizerunkowa</option>
+                            <option value="slubna">Reportaż ślubny</option>
+                            <option value="plenerowa">Sesja plenerowa</option>
+                        </select>
+                    </div>
+
+                    <textarea name="message" id="message" placeholder="Wiadomość" required></textarea>
+                    <input type="submit" class="button-form" value="Wyślij">
+
+                </form>
+
+            </div>
+            
+            
 
 
         </main>

@@ -20,4 +20,8 @@ document.getElementById("footer").innerHTML = `
     <p>© 2026 Maja Gaweł</p>
 `;
 
+document.getElementById("contactForm").addEventListener("submit", function(e){
 
+
+
+});

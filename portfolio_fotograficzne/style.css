@@ -1,6 +1,4 @@
-/* ==========================================
-   1. GLOBAL VARIABLES & RESET
-   ========================================== */
+/* ==========================================*/
 :root {
     --bg-color: #fcf8f5;
     --nav-bg: #f9ede4;
@@ -42,9 +40,7 @@ body{
 }
 
 
-/* ==========================================
-   2. HEADER & NAVIGATION
-   ========================================== */
+/* ========================================== */
 header {
     
     text-align: center;
@@ -93,9 +89,7 @@ nav a:hover, nav a.active {
 
 }
 
-/* ==========================================
-   3. HOME PAGE ONLY
-   ========================================== */
+/* ==========================================*/
 .hero-banner {
     position: relative;
     width: 100%;
@@ -157,9 +151,7 @@ nav a:hover, nav a.active {
     color: #fff6ee;
 }
 
-/* ==========================================
-   4. GALLERY PAGE ONLY
-   ========================================== */
+/* ========================================== */
 .site-container {
     max-width: 1450px;
     margin: 0 auto;
@@ -236,9 +228,7 @@ nav a:hover, nav a.active {
     transform: scale(1.5);
 }
 
-/* ==========================================
-   5. GALLERY PAGE ONLY-LIGHTBOX
-   ========================================== */
+/* ==========================================*/
 .lightbox {
     display: none; 
     position: fixed;
@@ -281,11 +271,8 @@ nav a:hover, nav a.active {
 #prev-btn { left: 20px; }
 #next-btn { right: 20px; }
 
-/* ==========================================
-   6. ABOUT ME PAGE ONLY
-   ========================================== */
+/* ==========================================*/
 .about-main {
-
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -316,8 +303,6 @@ nav a:hover, nav a.active {
     font-size: 0.95rem;
     margin-top: -10px;
 }
-
-/* 2. Środkowa sekcja  */
 .meet-section {
     background-color: rgb(253, 241, 232);
     width: 100%;
@@ -346,41 +331,82 @@ nav a:hover, nav a.active {
     height: auto;
     background: rgba(74, 62, 61, 0.55);
 }
-
-/*                      */
 .break{
     min-height: 10px;
 }
-/* 3. Dolny, szeroki baner z tekstem na zdjęciu */
-.banner-section {
-    position: relative;
-    width: 100%;
-    min-height: 480px;
-    background-image: url('ja (8).jpg'); 
-    background-size: cover;
-    background-position: center 20%;
-    border-radius: 4px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 
-    margin-bottom: 50px;
-    overflow: hidden;
-    box-shadow: 0 4px 15px var(--shadow-soft);
+
+/* ==========================================*/
+*, *::before, *::after {
+    box-sizing: border-box;
 }
-.banner-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
+.contact{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+form{
+    width: 570px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+input,select{
     width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.25) 100%);
+    height: 35px;
+
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-color) ;
+    border-radius: 1px;
+    padding: 0 10px;
 }
-.banner-content {
-    position: relative;
-    z-index: 2;
-    text-align: center;
-    color: #ffffff;
-    max-width: 700px;
-    padding: 20px;
+
+input::placeholder, select, textarea::placeholder {
+    font-family: "IBM Plex Serif", serif;
+    color: var(--text-color);
+    opacity: 0.8;
+}
+
+.form-one{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex:1;
+    align-items: center;
+    gap: 10px ;
+    margin-bottom: 10px;
+
+}
+
+textarea{
+    font-family: "IBM Plex Serif", serif;
+    width: 100%;
+    height: 80px;
+    border-color:var(--border-color);
+    background-color: var(--bg-color) ;
+    border-radius: 1px;
+    resize: vertical;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.button-form {
+        
+    font-family: "IBM Plex Serif", serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    background-color:var(--text-color);
+    color: var(--bg-color);
+
+}
+
+.button-form:hover {
+    background-color: var(--bg-color);
+    color: var(--text-color);
 }

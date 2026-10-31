@@ -88,7 +88,7 @@ const gallery = document.getElementById("gallery");
 let currentPhotos = [];
 let currentIndex = 0;
 
-// Pobieramy elementy z HTML
+
 const lightbox = document.getElementById("lightbox");
 const lightboxImg = document.getElementById("lightbox-img");
 const lightboxClose = document.querySelector(".lightbox-close");
@@ -97,8 +97,6 @@ const nextBtn = document.getElementById("next-btn");
 
 function showPhotos(category){
     gallery.innerHTML = "";
-    console.log(category);
-    
 
     currentPhotos=[];
      if (category === "all") {
