@@ -57,3 +57,45 @@ document.getElementById("footer").innerHTML = `
     <p>© 2026 Maja Gaweł</p>
 `;
 
+const contactForm = document.getElementById("contactForm");
+
+if (contactForm) {
+    contactForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const submitBtn = contactForm.querySelector('.button-form');
+        const originalBtnText = submitBtn.value || submitBtn.textContent;
+        
+        if (submitBtn.tagName === 'INPUT') {
+            submitBtn.value = "Wysyłanie...";
+        } else {
+            submitBtn.textContent = "Wysyłanie...";
+        }
+
+        const formData = new FormData(contactForm);
+        fetch(contactForm.action, {
+            method: "POST",
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
+        })
+        .then(response => {
+            if (response.ok) {
+                contactForm.innerHTML = `
+                    <div style="text-align: center; padding: 30px 10px;">
+                        <h3 class="windsong-regular" style="font-size: 3rem; color: var(--accent-dark); margin-bottom: 10px;">Dziękuję!</h3>
+                        <p style="font-size: 1.1rem; opacity: 0.9;">Twoja wiadomość została wysłana. Odpowiem najszybciej, jak to możliwe.</p>
+                    </div>
+                `;
+            } else {
+                alert("Wystąpił błąd podczas wysyłania. Spróbuj ponownie.");
+                if (submitBtn.tagName === 'INPUT') {
+                    submitBtn.value = originalBtnText;
+                } else {
+                    submitBtn.textContent = originalBtnText;
+                }
+            }
+        })
+    });
+}
