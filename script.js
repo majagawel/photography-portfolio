@@ -1,9 +1,6 @@
 document.getElementById("header").innerHTML=`
-    <header id="header">
         <h1>Maja Gaweł</h1>
         <p class="subtitle">FOTOGRAFIA</p>
-        
-    </header>
 `
 const currentPage = window.location.pathname.split("/").pop() || "index.html";
 document.getElementById("nav").innerHTML=`
