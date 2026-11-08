@@ -49,6 +49,13 @@ if (categoryToggle && categories) {
     });
 }
 
+
+window.addEventListener("load", function () {
+    const loaderWrapper = document.getElementById("loader-wrapper");
+    loaderWrapper.classList.add("loader-hidden");
+
+});
+
 document.getElementById("footer").innerHTML = `
     <p>© 2026 Maja Gaweł</p>
 `;
