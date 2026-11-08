@@ -19,6 +19,28 @@ document.getElementById("nav").innerHTML=`
     </div>
 `;
 
+document.getElementById("footer").innerHTML = `
+    <div class="footer-content">
+        <p>© 2026 Maja Gaweł</p>
+        <div class="social-links">
+            <a href="https://www.instagram.com/maja.gawel06/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=100059782929701&locale=pl_PL" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="https://github.com/majagawel" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/maja-gawe%C5%82-3479b0367/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+        </div>
+
+    </div>
+    
+`;
+
 const menuToggle = document.querySelector(".menu-toggle");
 const nav = document.getElementById("nav");
 
@@ -53,9 +75,7 @@ window.addEventListener("load", function () {
 
 });
 
-document.getElementById("footer").innerHTML = `
-    <p>© 2026 Maja Gaweł</p>
-`;
+
 
 const contactForm = document.getElementById("contactForm");
 
